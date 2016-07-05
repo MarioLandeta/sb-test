@@ -21,3 +21,6 @@ group :development do
 end
 
 gem "twitter-bootstrap-rails"
+gem "annotate"
+gem 'rails_admin'
+gem 'paperclip'

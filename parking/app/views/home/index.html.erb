@@ -19,32 +19,16 @@
 
 <div class="container">
     <div class="row">
+      <% @places.each do |place| %>
         <div class="col-md-4">
             <%= link_to home_login_path, :class => "thumbnail" do %>
-              <%= image_tag 'p1' %>
+              <%= image_tag place.image.url(:medium) %>
               <div class="caption">
-                <h3>Parking 1</h3>
-                <p>Se encuentar en un lugar muy bonito de miraflores</p>
+                <h3><%= place.name %></h3>
+                <p><%= place.description %></p>
               </div>                
             <% end %>
         </div>
-       <div class="col-md-4">
-            <%= link_to home_login_path, :class => "thumbnail" do %>
-              <%= image_tag 'p1' %>
-              <div class="caption">
-                <h3>Parking 2</h3>
-                <p>Se encuentar en un lugar muy bonito de miraflores</p>
-              </div>                
-            <% end %>
-        </div>
-       <div class="col-md-4">
-            <%= link_to home_login_path, :class => "thumbnail" do %>
-              <%= image_tag 'p1' %>
-              <div class="caption">
-                <h3>Parking 3</h3>
-                <p>Se encuentar en un lugar muy bonito de miraflores</p>
-              </div>                
-            <% end %>
-        </div>
+      <% end %>
     </div>
 </div>
